@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mion portfolio</title>
+        <link
+            rel="shortcut icon"
+            href="./images/favicon.png"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <div class="content">
+            <main class="front-page" id="front-page">
+                <button class="doubleArrowsRight" onclick="projectPage()">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="48"
+                        width="48"
+                    >
+                        <path
+                            d="m12.75 35.95-2.1-2.1 9.9-9.9-9.9-9.9 2.1-2.1 12 12Zm12.65 0-2.1-2.1 9.9-9.9-9.9-9.9 2.1-2.1 12 12Z"
+                        />
+                    </svg>
+                </button>
+                <div class="logo-text">Mio Julkunen</div>
+                <div class="flexTest">
+                    <button class="link-to-contact" onclick="contactPage()">
+                        Ota yhteyttä
+                    </button>
+                    <button
+                        class="link-to-projects cta-button"
+                        onclick="projectPage()"
+                    >
+                        Projektit
+                    </button>
+                </div>
+            </main>
+
+            <section class="project-page" id="project-page">
+                <button class="doubleArrowsLeft" onclick="frontPage()">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="48"
+                        width="48"
+                    >
+                        <path
+                            d="m22.65 35.95-12-12 12-12 2.1 2.1-9.9 9.9 9.9 9.9Zm12.65 0-12-12 12-12 2.1 2.1-9.9 9.9 9.9 9.9Z"
+                        />
+                    </svg>
+                </button>
+                <button class="doubleArrowsRight" onclick="contactPage()">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="48"
+                        width="48"
+                    >
+                        <path
+                            d="m12.75 35.95-2.1-2.1 9.9-9.9-9.9-9.9 2.1-2.1 12 12Zm12.65 0-2.1-2.1 9.9-9.9-9.9-9.9 2.1-2.1 12 12Z"
+                        />
+                    </svg>
+                </button>
+                <div class="container">
+                    <ul>
+                        <li><a href="https://public.bc.fi/s2000966/react-ja-redux-tehtavat/">React ja Redux</a></li>
+                        <li><a href="https://weihoj.github.io/TimeTracker/">Time Tracker</a></li>
+                        <li><a href="https://weihoj.github.io/adviceGenerator/">Advice Generator</a></li>
+                        <li><a href="https://public.bc.fi/s2000966/portfolio/">Ekat tehtävät</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="contact-page" id="contact-page">
+                <button class="doubleArrowsLeft" onclick="projectPage()">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="48"
+                        width="48"
+                    >
+                        <path
+                            d="m22.65 35.95-12-12 12-12 2.1 2.1-9.9 9.9 9.9 9.9Zm12.65 0-12-12 12-12 2.1 2.1-9.9 9.9 9.9 9.9Z"
+                        />
+                    </svg>
+                </button>
+                <div class="vert-80">
+                    <form>
+                        <h1>OTA YHTEYTTÄ</h1>
+                        <div class="input-wrapper">
+                            <label for="nimi" class="label">Nimi</label
+                            ><input
+                                type="text"
+                                id="nimi"
+                                class="text-input"
+                                autocomplete="off"
+                                required
+                            />
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="email" class="label">Email</label
+                            ><input
+                                type="email"
+                                id="email"
+                                class="text-input"
+                                autocomplete="off"
+                                required
+                            />
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="viesti" class="label">Viesti</label>
+                            <textarea
+                                name="viesti"
+                                id="viesti"
+                                cols="86"
+                                rows="10"
+                                class="text-input"
+                            ></textarea>
+                        </div>
+                        <div class="submit-wrapper">
+                            <button
+                                type="submit"
+                                class="form-button cta-button2"
+                            >
+                                Lähetä
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+        <div class="nav-dots">
+            <button
+                class="nav-dot front-page-ind"
+                onclick="frontPage()"
+            ></button>
+            <button
+                class="nav-dot project-page-ind"
+                onclick="projectPage()"
+            ></button>
+            <button
+                class="nav-dot contact-page-ind"
+                onclick="contactPage()"
+            ></button>
+        </div>
+    </body>
+</html>

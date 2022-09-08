@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+    --dark-blue: #011627;
+    --bright-pink: #ff3366;
+    --minty-blue: #2ec4b6;
+    --dark-white: #cacaca;
+    --light-blue: #20a4f3;
+}
+
+html,
+body,
+.content {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.content::-webkit-scrollbar {
+    display: none;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+
+    /* Scrollbar piiloon :O */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.content>* {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+}
+
+/* Main page */
+
+.front-page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-blue);
+}
+
+.logo-text {
+    text-align: center;
+    font-size: 10rem;
+    line-height: 11rem;
+    font-weight: 700;
+    color: var(--dark-white);
+    margin: 0;
+    padding: 0;
+    transform: skew(-8deg) rotate(-8deg);
+    animation: moveToPlace1 1s;
+}
+
+.flexTest {
+    transform: rotate(-8deg);
+}
+
+.link-to-projects,
+.link-to-contact {
+    width: 20rem;
+    height: 4rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--dark-blue);
+    border: 0;
+    margin: 5rem 1rem 0 1rem;
+    padding: 0;
+    border-radius: 1rem;
+    transform: skew(-8deg);
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.link-to-contact {
+    border: var(--bright-pink) 2px solid;
+    background-color: transparent;
+    color: var(--bright-pink);
+    animation: moveToPlace2Left 1s ease-out;
+}
+
+.cta-button {
+    background-color: var(--bright-pink);
+    animation: moveToPlace2Right 1s ease-in;
+}
+
+.link-to-projects:hover,
+.link-to-contact:hover {
+    box-shadow: var(--bright-pink) 0 0 1rem 0.1rem;
+}
+
+/* Main page load animations */
+@keyframes moveToPlace1 {
+    0% {
+        transform: skew(-8deg) rotate(-8deg) translate(0, -75vh);
+    }
+
+    70% {
+        transform: skew(-8deg) rotate(-8deg) translate(0, 5vh);
+    }
+
+    100% {
+        transform: skew(-8deg) rotate(-8deg) translate(0, 0);
+    }
+}
+
+@keyframes moveToPlace2Left {
+    0% {
+        transform: translate(-75vw, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes moveToPlace2Right {
+    0% {
+        transform: translate(75vw, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* Project page */
+
+.project-page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-blue);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh * 0.8);
+    width: calc(100vw * 0.7);
+    margin: 0 10rem;
+}
+
+.container ul li {
+    list-style: none;
+}
+
+ul {
+    padding: 0;
+    width: 100%;
+    display: grid;
+    place-content: center;
+}
+
+.container ul li {
+    text-align: center;
+}
+
+.container ul li a {
+    text-decoration: none;
+    font-size: 5rem;
+    font-weight: 500;
+    color: var(--light-blue);
+    border-bottom: 5px solid var(--minty-blue);
+    border-radius: 1rem;
+}
+
+.container ul li:hover a {
+    text-shadow: var(--light-blue) 0 0 2rem;
+    font-weight: 600;
+}
+
+
+/* Contact page */
+
+.contact-page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-blue);
+}
+
+.vert-80 {
+    height: calc(100vh * 0.8);
+}
+
+
+
+
+/* Ota yhteyttä lomake */
+
+form {
+    width: calc(100vw * 0.7);
+    height: calc(100vh * 0.6);
+    margin: 0 10rem;
+    display: flex;
+    flex-direction: column;
+}
+
+form>* {
+    flex: 1;
+}
+
+form h1 {
+    color: var(--dark-white);
+    font-size: 5rem;
+    font-weight: bold;
+    margin: 1rem;
+    text-decoration: underline;
+    text-decoration-color: var(--minty-blue);
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    flex: 2;
+}
+
+textarea {
+    resize: none;
+}
+
+input,
+textarea {
+    font-size: 1.5rem;
+    font-weight: 500;
+    background-color: var(--dark-white);
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.label {
+    color: var(--dark-white);
+    font-size: 2rem;
+}
+
+.cta-button2 {
+    font-weight: 500;
+    color: var(--dark-blue);
+    border: 3px solid var(--dark-blue);
+    background-color: var(--bright-pink);
+    border-radius: 0.7rem;
+}
+
+.submit-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.form-button {
+    height: 4rem;
+    width: 50%;
+    font-size: 2rem;
+}
+
+/* Navigaatio pisteet */
+
+.nav-dots {
+    position: fixed;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.nav-dots button.nav-dot {
+    background-color: transparent;
+    width: 2rem;
+    aspect-ratio: 1 / 1;
+    border: 2px solid var(--minty-blue);
+    border-radius: 50%;
+    margin: 0 1rem;
+}
+
+.active {
+    background-color: var(--minty-blue) !important;
+}
+
+.nav-dot:hover {
+    box-shadow: var(--minty-blue) 0 0 1rem 0.1rem;
+}
+
+/* Arrow animations */
+@keyframes jigglewiggle {
+
+    0%,
+    100% {
+        right: 4rem;
+    }
+
+    50% {
+        right: 1rem;
+    }
+}
+
+@keyframes wigglejiggle {
+
+    0%,
+    100% {
+        left: 4rem;
+    }
+
+    50% {
+        left: 1rem;
+    }
+}
+
+.doubleArrowsLeft,
+.doubleArrowsRight {
+    background-color: transparent;
+    border: none;
+    width: 4.8rem;
+    aspect-ratio: 1 / 1;
+    z-index: 10;
+    position: absolute;
+    right: 3rem;
+    fill: var(--dark-white);
+}
+
+.doubleArrowsRight {
+    animation: jigglewiggle 2s infinite ease-in-out;
+}
+
+.doubleArrowsRight:hover,
+.doubleArrowsLeft:hover {
+    animation-play-state: paused;
+}
+
+.doubleArrowsLeft {
+    animation: wigglejiggle 2s infinite ease-in-out;
+}
+
+@media (max-width: 600px) {
+    form h1 {
+        font-size: 4rem;
+    }
+
+    .label {
+        font-size: 3rem;
+    }
+}
